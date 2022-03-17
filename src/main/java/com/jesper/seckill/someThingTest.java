@@ -11,7 +11,6 @@ public class someThingTest {
 
     @Test
     public void test1(){
-        System.out.println(userMapper.getMobileExist("14963798710"));
 
     }
 

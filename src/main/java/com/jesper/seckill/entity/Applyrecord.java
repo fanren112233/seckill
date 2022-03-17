@@ -3,6 +3,8 @@ package com.jesper.seckill.entity;
 import java.util.Date;
 
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 @SuppressWarnings("serial")
 @Data
@@ -10,8 +12,10 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
+
 public class Applyrecord  {
     //编号@TableId
+    @TableId
     private Integer id;
 
     //状态 选项  0=成功 1=失败

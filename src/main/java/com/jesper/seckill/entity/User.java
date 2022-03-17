@@ -3,6 +3,8 @@ package com.jesper.seckill.entity;
 import java.util.Date;
 
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 @SuppressWarnings("serial")
 @Data
@@ -10,10 +12,11 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@TableName("t_user")
 public class User  {
     //身份证号
     private String idcard;
-    
+    @TableId
     private Long mobile;
     //余额
     private Double money;

@@ -1,12 +1,13 @@
 package com.jesper.seckill.mapper;
 
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jesper.seckill.entity.User;
 import com.jesper.seckill.vo.RegiestVo;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
 
     @Select("select * from t_user where mobile = #{id}")
     public User getById(@Param("id")long id);
@@ -19,5 +20,6 @@ public interface UserMapper {
 
     @Select("select idCard from t_user where mobile = #{id} ")
     public String getMobileExist(@Param("id")String id);
+
 
 }
